@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Simple calculator</h1>
+    </head>
+       <body style="font-family: cursive;background-color: rgb(227, 161, 214); text-align: center;">
+    
+    
+    <div class="from-control" style="font-family: sans-serif;">
+        <label>ENTER A VALUE</label>
+        <input type="number" id="text-1" name="number">
+    </div>
+    <br>
+    <div class="from-control" style="font-family: sans-serif;">
+        <label style="font-family: sans-serif;">ENTER B VALUE</label>
+        <input type="number" id="text-2" name="number">
+    </div>
+    <br>
+    <div class="from-control">
+        <button onclick="addition()">ADD(+)</button>
+        <button onclick="Substraction()">SUB(-)</button>
+        <button onclick="multiplication()">MUL(*)</button>
+        <button onclick="Division()">DIV(/)</button>
+       </div>
+       <br>
+       <div class="from-control">
+           <label style="font-family: sans-serif;">RESULT:</label>
+           <input type="number" id="result" name="number" disabled>
+       </div>
+       <script>
+           var A, B, SUM, SUB, MUL, DIV;
+
+           console.log("Start the execution")
+
+           function addition() {
+               A=parseInt(document.getElementById('text-1').value);
+               B=parseInt(document.getElementById('text-2').value);
+               sum = A + B;
+               document.getElementById('result').value=sum;
+           }
+           function Substraction() {
+               A=parseInt(document.getElementById('text-1').value);
+               B=parseInt(document.getElementById('text-2').value);
+               sum = A - B;
+               document.getElementById('result').value=sum;
+           }
+
+           function multiplication() {
+               A=parseInt(document.getElementById('text-1').value);
+               B=parseInt(document.getElementById('text-2').value);
+               sum = A * B;
+               document.getElementById('result').value=sum;
+           }
+
+           function Division() {
+               A=parseInt(document.getElementById('text-1').value);
+               B=parseInt(document.getElementById('text-2').value);
+               sum = A / B;
+               document.getElementById('result').value=sum;
+           }
+
+       </script>
+    </body>
+</html>
